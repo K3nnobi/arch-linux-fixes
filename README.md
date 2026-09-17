@@ -36,6 +36,7 @@ The goal of this repository is simple: document the **problem**, explain the **c
 
 - [Caps Lock No Delay](gnome/caps-lock-no-delay/README.md) — removes the observed delay when turning Caps Lock off quickly by using a safe `keyd` mapping.
 - [GNOME Drag Hover Raise](gnome/drag-hover-raise/README.md) — raises application windows while dragging files over Dash to Dock icons or visible portions of partially covered windows.
+- [Nautilus Windows EXE Thumbnails](gnome/nautilus-exe-thumbnails/README.md) — displays embedded Windows executable icons as Nautilus thumbnails and removes the unwanted transparent-thumbnail background.
 
 ### NVIDIA
 
@@ -57,7 +58,11 @@ arch-linux-fixes/
 │   │   ├── README.md
 │   │   ├── fix.sh
 │   │   └── rollback.sh
-│   └── drag-hover-raise/
+│   ├── drag-hover-raise/
+│   │   ├── README.md
+│   │   ├── fix.sh
+│   │   └── rollback.sh
+│   └── nautilus-exe-thumbnails/
 │       ├── README.md
 │       ├── fix.sh
 │       └── rollback.sh

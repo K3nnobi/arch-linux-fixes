@@ -1,6 +1,18 @@
-# Arch Linux Fixes
+<p align="center">
+  <img src="assets/logo.png" alt="Arch Linux Fixes logo" width="240">
+</p>
 
-Practical fixes, patches and troubleshooting notes for real problems encountered while using Arch Linux.
+<h1 align="center">Arch Linux Fixes</h1>
+
+<p align="center">
+  Practical fixes, patches and troubleshooting notes for real problems encountered while using Arch Linux.
+</p>
+
+<p align="center">
+  <strong>Diagnose. Fix. Understand. Roll back safely.</strong>
+</p>
+
+---
 
 The goal of this repository is simple: document the **problem**, explain the **cause**, provide a **manual fix**, offer an **automatic script when appropriate**, and include a **safe rollback path**.
 
@@ -24,6 +36,8 @@ The goal of this repository is simple: document the **problem**, explain the **c
 
 ```text
 arch-linux-fixes/
+├── assets/
+│   └── logo.png
 ├── firefox/
 │   └── chatgpt-color-emoji/
 │       ├── README.md

@@ -32,6 +32,11 @@ The goal of this repository is simple: document the **problem**, explain the **c
 
 - [ChatGPT Color Emoji Fix](firefox/chatgpt-color-emoji/README.md) — fixes mixed monochrome/color emoji rendering in ChatGPT while preserving normal text spacing and typography.
 
+### GNOME / Wayland
+
+- [Caps Lock No Delay](gnome/caps-lock-no-delay/README.md) — removes the observed delay when turning Caps Lock off quickly by using a safe `keyd` mapping.
+- [GNOME Drag Hover Raise](gnome/drag-hover-raise/README.md) — raises application windows while dragging files over Dash to Dock icons or visible portions of partially covered windows.
+
 ## Repository layout
 
 ```text
@@ -40,6 +45,15 @@ arch-linux-fixes/
 │   └── logo.png
 ├── firefox/
 │   └── chatgpt-color-emoji/
+│       ├── README.md
+│       ├── fix.sh
+│       └── rollback.sh
+├── gnome/
+│   ├── caps-lock-no-delay/
+│   │   ├── README.md
+│   │   ├── fix.sh
+│   │   └── rollback.sh
+│   └── drag-hover-raise/
 │       ├── README.md
 │       ├── fix.sh
 │       └── rollback.sh
@@ -54,6 +68,8 @@ Always read a patch README before running its script. Fixes that require `sudo`,
 
 The scripts in this repository are intended to be transparent: you should be able to inspect exactly what will change before running them.
 
+Version-sensitive patches intentionally abort when the detected software version or file structure is outside the environment that was actually tested.
+
 ## Tested environment
 
 The first fixes in this repository are being developed and tested primarily on:
@@ -62,7 +78,7 @@ The first fixes in this repository are being developed and tested primarily on:
 - GNOME / Wayland
 - Firefox
 
-Individual patch pages contain their own tested-environment details.
+Individual patch pages contain their own tested-environment details and limitations.
 
 ## AI assistance
 

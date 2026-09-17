@@ -42,12 +42,19 @@ The goal of this repository is simple: document the **problem**, explain the **c
 
 - [NVIDIA Digital Vibrance Autoload](nvidia/nvibrant-autoload/README.md) — reapplies a chosen `nvibrant` intensity automatically after login through a delayed `systemd --user` service.
 
+### Boot
+
+- [Plymouth + GRUB Clean Boot](boot/plymouth-grub-clean-boot/README.md) — confirmed clean graphical boot procedure for GRUB + traditional `mkinitcpio`/`udev`; published as a manual high-risk guide rather than unsafe one-click automation.
+
 ## Repository layout
 
 ```text
 arch-linux-fixes/
 ├── assets/
 │   └── logo.png
+├── boot/
+│   └── plymouth-grub-clean-boot/
+│       └── README.md
 ├── firefox/
 │   └── chatgpt-color-emoji/
 │       ├── README.md
@@ -83,6 +90,8 @@ Always read a patch README before running its script. Fixes that require `sudo`,
 The scripts in this repository are intended to be transparent: you should be able to inspect exactly what will change before running them.
 
 Version-sensitive patches intentionally abort when the detected software version or file structure is outside the environment that was actually tested.
+
+High-risk boot fixes may be documented without an automatic installer until a standalone implementation can safely validate and roll back every supported layout.
 
 ## Tested environment
 

@@ -37,6 +37,10 @@ The goal of this repository is simple: document the **problem**, explain the **c
 - [Caps Lock No Delay](gnome/caps-lock-no-delay/README.md) — removes the observed delay when turning Caps Lock off quickly by using a safe `keyd` mapping.
 - [GNOME Drag Hover Raise](gnome/drag-hover-raise/README.md) — raises application windows while dragging files over Dash to Dock icons or visible portions of partially covered windows.
 
+### NVIDIA
+
+- [NVIDIA Digital Vibrance Autoload](nvidia/nvibrant-autoload/README.md) — reapplies a chosen `nvibrant` intensity automatically after login through a delayed `systemd --user` service.
+
 ## Repository layout
 
 ```text
@@ -54,6 +58,11 @@ arch-linux-fixes/
 │   │   ├── fix.sh
 │   │   └── rollback.sh
 │   └── drag-hover-raise/
+│       ├── README.md
+│       ├── fix.sh
+│       └── rollback.sh
+├── nvidia/
+│   └── nvibrant-autoload/
 │       ├── README.md
 │       ├── fix.sh
 │       └── rollback.sh
@@ -77,6 +86,7 @@ The first fixes in this repository are being developed and tested primarily on:
 - Arch Linux
 - GNOME / Wayland
 - Firefox
+- NVIDIA where explicitly stated by an individual patch
 
 Individual patch pages contain their own tested-environment details and limitations.
 
@@ -88,4 +98,4 @@ The final implementation and real-system testing are performed by the repository
 
 ## Disclaimer
 
-These fixes are community-maintained and are not official Arch Linux, Mozilla, OpenAI or GNOME support resources. Review scripts before executing them and keep backups of important data.
+These fixes are community-maintained and are not official Arch Linux, Mozilla, OpenAI, NVIDIA or GNOME support resources. Review scripts before executing them and keep backups of important data.

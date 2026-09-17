@@ -39,6 +39,10 @@ The goal of this repository is simple: document the **problem**, explain the **c
 - [Blur My Shell — Rounded Dynamic Blur Corners](gnome/blur-my-shell-rounded-corners/README.md) — installs the `gnome-rounded-blur` compatibility library so dynamic Blur My Shell effects can follow rounded GNOME corners instead of showing square blur edges.
 - [Nautilus Windows EXE Thumbnails](gnome/nautilus-exe-thumbnails/README.md) — displays embedded Windows executable icons as Nautilus thumbnails and removes the unwanted transparent-thumbnail background.
 
+### Gaming
+
+- [GameMode + Blur My Shell](gaming/gamemode-blur-my-shell/README.md) — experimental integration recovered from ArchMind 1.5.11 that temporarily suspends Blur My Shell while GameMode is active and restores only the extensions that were enabled before the game started.
+
 ### NVIDIA
 
 - [NVIDIA Digital Vibrance Autoload](nvidia/nvibrant-autoload/README.md) — reapplies a chosen `nvibrant` intensity automatically after login through a delayed `systemd --user` service.
@@ -60,6 +64,13 @@ arch-linux-fixes/
 │   └── chatgpt-color-emoji/
 │       ├── README.md
 │       ├── fix.sh
+│       └── rollback.sh
+├── gaming/
+│   └── gamemode-blur-my-shell/
+│       ├── README.md
+│       ├── fix.sh
+│       ├── gamemode-blur.sh
+│       ├── test.sh
 │       └── rollback.sh
 ├── gnome/
 │   ├── blur-my-shell-rounded-corners/
@@ -95,6 +106,8 @@ Always read a patch README before running its script. Fixes that require `sudo`,
 The scripts in this repository are intended to be transparent: you should be able to inspect exactly what will change before running them.
 
 Version-sensitive patches intentionally abort when the detected software version or file structure is outside the environment that was actually tested.
+
+Experimental patches are labeled explicitly when automated validation exists but final real-session testing has not been recorded.
 
 High-risk boot fixes may be documented without an automatic installer until a standalone implementation can safely validate and roll back every supported layout.
 
